@@ -1,5 +1,13 @@
 let requests = [["excavator", 50000], ["bulldozer", 70000]]
 let sellers = [["excavator", 45000], ["bulldozer", 68000], ["excavator", 48000]]
+
+requests = requests.sort((a,b)=>{
+    return a[1]-b[1]
+})
+sellers = sellers.sort((a,b)=>{
+    return a[1]-b[1]
+})
+
 function question(requests,sellers){
     let result = []
     for(let i=0;i<requests.length;i++){
